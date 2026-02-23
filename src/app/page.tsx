@@ -1,11 +1,9 @@
 "use client"
 
-import ModeToggle from "@/components/ModeToggle";
-import { Button } from "@/components/ui/button";
-import { SignedIn, SignedOut, SignInButton, UserButton } from "@clerk/nextjs";
-import Image from "next/image";
+import prisma from "@/lib/prisma";
 
-export default function Home() {
+export default async function Home() {
+  await prisma
   return (
     <div className="m-4">
       <h1>home ṕage content</h1>
